@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>pagina Inicial</title>
+        <title>Pagina Inicial</title>
     </head>
     <body>
         <?php
