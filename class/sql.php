@@ -2,7 +2,7 @@
 /**
  * Description of sql
  *
- * @author elton
+ * @author Elton John Toledo
  */
 class sql extends PDO{
     private $conn;

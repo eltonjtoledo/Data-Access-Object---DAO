@@ -2,7 +2,7 @@
 /**
  * Description of Usuario
  *
- * @author elton
+ * @author Elton John Toledo
  */
 
 class Usuario {
