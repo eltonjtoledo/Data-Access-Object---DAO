@@ -67,6 +67,6 @@ class Usuario {
                'deslogin' => $this->getlogin(),
                'dessenha' => $this->getsenha(),
                'dtcadastro' => $this->getdtcadastro()
-           ));
+           ),JSON_PRETTY_PRINT);
     }
 }
