@@ -1,42 +1,46 @@
 <?php
 require_once './config.php';
 
-//  Carrega um usuario pelo seu ID
-//  
-//$user = new Usuario();
-//$user->loadById('4');
-//echo $user;
+//  Get a user by ID
+// $user = new User();
+// $user->loadById('2');
+// echo $user;
 
-//  Carrega uma lista com todos os Usuarios
-//  
-//$lista = Usuario::getList();
-//echo json_encode($lista);
+//  Load a list of all users
 
-//  Carrega uma lista de Usuarios esquisando por texto informado
-//  
-//$search = Usuario::searchList('us');
-//echo json_encode($search);
+// $lista = User::getList();
+// echo json_encode($lista);
 
-//  Carrega um usuario validando com login e senha
-//
-//$login =  new Usuario();
-//$login->logar('usuario3', '!@#$%');
-//echo $login;
+//  Load a list of all users searching by username
 
-//  Cadastra um novo usuario
-//
-//$aluno = new Usuario();
-//$aluno->insert('Asristel', '!@576#$');
-//echo $aluno;
+// $search = User::searchList('el');
+// echo json_encode($search);
 
-//  Fazendo Update dos dados do usuario
-//
-//$update = new Usuario('Matheus', '*%$#', '2');
-//$update->update();
-//echo $update;
+//  Load a user validates with username and password
 
-//  Apagando Usuario
-//
-//$delete = new Usuario();
-//$delete->Delete(5);
-//echo $delete;
+// $login =  new User();
+// try {
+//     $login->login('eltonjtoledo', '12345');
+// } catch (\Exception $e) {
+//     echo $e->getmessage();
+//     die();
+// }
+// echo $login;
+
+//  Create a new user
+
+// $aluno = new User();
+// $aluno->insert('Asristel', '!@576#$');
+// echo $aluno;
+
+// Updating user data
+
+// $update = new User();
+// $update->update('Matheus', '*%$#', '2');
+// echo $update;
+
+//  Delete User
+
+// $delete = new User();
+// $delete->Delete(2);
+// echo $delete;

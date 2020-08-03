@@ -77,7 +77,7 @@ class User {
         if (count($results) > 0) {
             $this->getResults($results);
         } else {
-            throw new Exception("user or password incorrect, check your password and try again");
+            throw new Exception("username or password incorrect, check your password and try again");
         }
     }
 
@@ -86,23 +86,25 @@ class User {
         $this->setpassword($password);
         
         $sql = new sql();
-        $results = $sql->select("CALL sp_user_insert(:username, :password)", array(
+        $results = $sql->query("INSERT INTO tb_users (username, password) VALUES (:username, :password)", array(
             ":username" => $this->getUsername(),
             ":password" => $this->getPassword()
         ));
-
-        if (count($results) > 0) {
-            $this->getResults($results);
-        }
     }
     
     public function update($username, $password, $id) {
+        $this->setUsername($username);
+        $this->setpassword($password);
+        $this->setId($id);
+
         $sql = new sql();
         $results = $sql->query("UPDATE tb_users SET username = :username, password = :password WHERE id_user = :id", array(
             ":username"=> $this->getUsername(),
             ":password"=> $this->getPassword(),
             ":id"=> $this->getId()
         ));
+
+        return $results;
     }
     
     public function Delete($id) {

@@ -8,7 +8,7 @@ class sql extends PDO{
     private $conn;
     
     public function __construct() {
-        $this->conn = new PDO('mysql:host=localhost;dbname=dataAccess', 'elton', '123456');
+        $this->conn = new PDO('mysql:host=localhost;dbname=dao', 'elton', '123456');
     }    
     
     public function query($rowQuery, $params = array()) {
