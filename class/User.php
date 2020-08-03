@@ -5,7 +5,7 @@
  *
  * @author Elton John Toledo
  */
-class User  {
+class User {
 
     private $id_user;
     private $username;
